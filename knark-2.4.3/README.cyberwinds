@@ -1,0 +1,36 @@
+This package includes some sample 2.4 module codes and Knark.59 ported
+to kernel 2.4. I feel it is really nasty not to provide any protection
+module against knark in such kind of distribution, so in the
+knark-2.4.3 directory, you can find a syscall module. This syscall
+module can take a snapshot of all the syscall addresses in current
+system. By doing so, you can create a syscall addresses copy after a
+refresh installation and use this copy to validate your system
+integrity later on.
+
+If you do not know what knark is, you probably won't want to try it out.
+
+***********************************************************************
+*                                                                     *
+* I am not responsible for whatever you do with this code. It is for  *
+* educational purpose only!!! If you are busted, it is your own fault.*
+*                                                                     *
+***********************************************************************
+
+cyberwinds@hotmail.com #irc.openprojects.net
+
+What's new?
+
+1. 2.4 kernel support
+   *) The /proc filesystem stuff has to be completely rewritten
+because of kernel migration from 2.2 to 2.4. /proc node registration
+and cleanup code is completely different. There is no longer shortcut
+to identify /proc/net/tcp and /proc/net/udp--that were statistically
+set in 2.2 kernel.
+   *) The 2.4 kernel uses getdents64 to identify a dentry. As a
+   *) diff knark.c.2.2 knark.c will show all the changes made to the
+module to work on kernel 2.4
+result, sys_getdents64 has to be intercepted and new data structures
+are introduced.
+2. modhide can hide arbitrary module.
+   *) By using module->modname, arbitrary module can be hidden from
+examination.

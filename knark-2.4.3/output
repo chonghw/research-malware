@@ -1,0 +1,309 @@
+execve("/bin/ls", ["ls", "-la", "/tmp/"], [/* 42 vars */]) = 0
+uname({sys="Linux", node="climate.eps.jhu.edu", ...}) = 0
+brk(0)                                  = 0x8053c08
+open("/etc/ld.so.preload", O_RDONLY)    = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY)      = 3
+fstat64(3, {st_mode=S_IFREG|0644, st_size=49641, ...}) = 0
+old_mmap(NULL, 49641, PROT_READ, MAP_PRIVATE, 3, 0) = 0x40016000
+close(3)                                = 0
+open("/lib/libtermcap.so.2", O_RDONLY)  = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\200\r\0"..., 1024) = 1024
+fstat64(3, {st_mode=S_IFREG|0755, st_size=11608, ...}) = 0
+old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40023000
+old_mmap(NULL, 14696, PROT_READ|PROT_EXEC, MAP_PRIVATE, 3, 0) = 0x40024000
+mprotect(0x40027000, 2408, PROT_NONE)   = 0
+old_mmap(0x40027000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 3, 0x2000) = 0x40027000
+close(3)                                = 0
+open("/lib/librt.so.1", O_RDONLY)       = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\320\"\0"..., 1024) = 1024
+fstat64(3, {st_mode=S_IFREG|0755, st_size=26232, ...}) = 0
+old_mmap(NULL, 71732, PROT_READ|PROT_EXEC, MAP_PRIVATE, 3, 0) = 0x40028000
+mprotect(0x4002e000, 47156, PROT_NONE)  = 0
+old_mmap(0x4002e000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 3, 0x5000) = 0x4002e000
+old_mmap(0x40030000, 38964, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x40030000
+close(3)                                = 0
+open("/lib/libc.so.6", O_RDONLY)        = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\0\302\1"..., 1024) = 1024
+fstat64(3, {st_mode=S_IFREG|0755, st_size=1216268, ...}) = 0
+old_mmap(NULL, 1231496, PROT_READ|PROT_EXEC, MAP_PRIVATE, 3, 0) = 0x4003a000
+mprotect(0x4015e000, 35464, PROT_NONE)  = 0
+old_mmap(0x4015e000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 3, 0x123000) = 0x4015e000
+old_mmap(0x40163000, 14984, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x40163000
+close(3)                                = 0
+open("/lib/libc.so.6", O_RDONLY)        = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\0\302\1"..., 1024) = 1024
+fstat64(3, {st_mode=S_IFREG|0755, st_size=1216268, ...}) = 0
+close(3)                                = 0
+open("/lib/libc.so.6", O_RDONLY)        = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\0\302\1"..., 1024) = 1024
+fstat64(3, {st_mode=S_IFREG|0755, st_size=1216268, ...}) = 0
+close(3)                                = 0
+open("/lib/libpthread.so.0", O_RDONLY)  = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\240O\0"..., 1024) = 1024
+fstat64(3, {st_mode=S_IFREG|0755, st_size=517867, ...}) = 0
+old_mmap(NULL, 90396, PROT_READ|PROT_EXEC, MAP_PRIVATE, 3, 0) = 0x40167000
+mprotect(0x40176000, 28956, PROT_NONE)  = 0
+old_mmap(0x40176000, 28672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 3, 0xe000) = 0x40176000
+old_mmap(0x4017d000, 284, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x4017d000
+close(3)                                = 0
+open("/lib/libc.so.6", O_RDONLY)        = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\0\302\1"..., 1024) = 1024
+fstat64(3, {st_mode=S_IFREG|0755, st_size=1216268, ...}) = 0
+close(3)                                = 0
+munmap(0x40016000, 49641)               = 0
+getpid()                                = 2048
+rt_sigaction(SIGRT_0, {0x40170ad0, [], 0x4000000}, NULL, 8) = 0
+rt_sigaction(SIGRT_1, {0x4016fe80, [], 0x4000000}, NULL, 8) = 0
+rt_sigaction(SIGRT_2, {0x40170b60, [], 0x4000000}, NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [RT_0], NULL, 8) = 0
+_sysctl({{CTL_KERN, KERN_VERSION}, 2, 0xbffff5c4, 32, (nil), 0}) = 0
+getpid()                                = 2048
+brk(0)                                  = 0x8053c08
+brk(0x8053c38)                          = 0x8053c38
+brk(0x8054000)                          = 0x8054000
+open("/usr/share/locale/locale.alias", O_RDONLY) = 3
+fstat64(3, {st_mode=S_IFREG|0644, st_size=2567, ...}) = 0
+old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40016000
+read(3, "# Locale name alias data base.\n#"..., 4096) = 2567
+brk(0x8055000)                          = 0x8055000
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+munmap(0x40016000, 4096)                = 0
+open("/usr/share/locale/en/LC_IDENTIFICATION", O_RDONLY) = 3
+fstat64(3, {st_mode=S_IFREG|0644, st_size=244, ...}) = 0
+old_mmap(NULL, 244, PROT_READ, MAP_PRIVATE, 3, 0) = 0x40016000
+close(3)                                = 0
+open("/usr/share/locale/en/LC_MEASUREMENT", O_RDONLY) = 3
+fstat64(3, {st_mode=S_IFREG|0644, st_size=13, ...}) = 0
+old_mmap(NULL, 13, PROT_READ, MAP_PRIVATE, 3, 0) = 0x40017000
+close(3)                                = 0
+open("/usr/share/locale/en/LC_TELEPHONE", O_RDONLY) = 3
+fstat64(3, {st_mode=S_IFREG|0644, st_size=49, ...}) = 0
+old_mmap(NULL, 49, PROT_READ, MAP_PRIVATE, 3, 0) = 0x40018000
+close(3)                                = 0
+open("/usr/share/locale/en/LC_ADDRESS", O_RDONLY) = 3
+fstat64(3, {st_mode=S_IFREG|0644, st_size=145, ...}) = 0
+old_mmap(NULL, 145, PROT_READ, MAP_PRIVATE, 3, 0) = 0x40019000
+close(3)                                = 0
+open("/usr/share/locale/en/LC_NAME", O_RDONLY) = 3
+fstat64(3, {st_mode=S_IFREG|0644, st_size=67, ...}) = 0
+old_mmap(NULL, 67, PROT_READ, MAP_PRIVATE, 3, 0) = 0x4001a000
+close(3)                                = 0
+open("/usr/share/locale/en/LC_PAPER", O_RDONLY) = 3
+fstat64(3, {st_mode=S_IFREG|0644, st_size=24, ...}) = 0
+old_mmap(NULL, 24, PROT_READ, MAP_PRIVATE, 3, 0) = 0x4001b000
+close(3)                                = 0
+open("/usr/share/locale/en_US/LC_MESSAGES", O_RDONLY) = 3
+fstat64(3, {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+close(3)                                = 0
+open("/usr/share/locale/en_US/LC_MESSAGES/SYS_LC_MESSAGES", O_RDONLY) = 3
+fstat64(3, {st_mode=S_IFREG|0644, st_size=42, ...}) = 0
+old_mmap(NULL, 42, PROT_READ, MAP_PRIVATE, 3, 0) = 0x4001c000
+close(3)                                = 0
+open("/usr/share/locale/en_US/LC_MONETARY", O_RDONLY) = 3
+fstat64(3, {st_mode=S_IFREG|0644, st_size=276, ...}) = 0
+old_mmap(NULL, 276, PROT_READ, MAP_PRIVATE, 3, 0) = 0x4001d000
+close(3)                                = 0
+open("/usr/share/locale/en_US/LC_COLLATE", O_RDONLY) = 3
+fstat64(3, {st_mode=S_IFREG|0644, st_size=21484, ...}) = 0
+old_mmap(NULL, 21484, PROT_READ, MAP_PRIVATE, 3, 0) = 0x4017e000
+close(3)                                = 0
+open("/usr/share/locale/en_US/LC_TIME", O_RDONLY) = 3
+fstat64(3, {st_mode=S_IFREG|0644, st_size=2441, ...}) = 0
+old_mmap(NULL, 2441, PROT_READ, MAP_PRIVATE, 3, 0) = 0x4001e000
+brk(0x8056000)                          = 0x8056000
+close(3)                                = 0
+open("/usr/share/locale/en_US/LC_NUMERIC", O_RDONLY) = 3
+fstat64(3, {st_mode=S_IFREG|0644, st_size=44, ...}) = 0
+old_mmap(NULL, 44, PROT_READ, MAP_PRIVATE, 3, 0) = 0x4001f000
+close(3)                                = 0
+open("/usr/share/locale/en_US/LC_CTYPE", O_RDONLY) = 3
+fstat64(3, {st_mode=S_IFREG|0644, st_size=110304, ...}) = 0
+old_mmap(NULL, 110304, PROT_READ, MAP_PRIVATE, 3, 0) = 0x40184000
+close(3)                                = 0
+time(NULL)                              = 989820195
+ioctl(1, TCGETS, 0xbffff810)            = -1 ENOTTY (Inappropriate ioctl for device)
+ioctl(1, TIOCGWINSZ, 0xbffff8d8)        = -1 ENOTTY (Inappropriate ioctl for device)
+brk(0x8059000)                          = 0x8059000
+lstat64("/tmp/", {st_mode=S_IFDIR|S_ISVTX|0777, st_size=4096, ...}) = 0
+open("/dev/null", O_RDONLY|O_NONBLOCK|O_DIRECTORY) = -1 ENOTDIR (Not a directory)
+open("/tmp/", O_RDONLY|O_NONBLOCK|O_LARGEFILE|O_DIRECTORY) = 3
+fstat64(3, {st_mode=S_IFDIR|S_ISVTX|0777, st_size=4096, ...}) = 0
+shmat(3, 0x2, 0x2ptrace: umoven: Input/output error
+)                      = ?
+brk(0x805b000)                          = 0x805b000
+ipc_subcall(0x3, 0x80583d0, 0x1000, 0)  = 688
+lstat64("/tmp/.", {st_mode=S_IFDIR|S_ISVTX|0777, st_size=4096, ...}) = 0
+lstat64("/tmp/..", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/tmp/.font-unix", {st_mode=S_IFDIR|S_ISVTX|0777, st_size=4096, ...}) = 0
+lstat64("/tmp/.X0-lock", {st_mode=S_IFREG|0444, st_size=11, ...}) = 0
+lstat64("/tmp/linuxconf-rpminstall.log", {st_mode=S_IFREG|0644, st_size=53, ...}) = 0
+lstat64("/tmp/ksocket-root", {st_mode=S_IFDIR|0700, st_size=4096, ...}) = 0
+lstat64("/tmp/.X11-unix", {st_mode=S_IFDIR|S_ISVTX|0777, st_size=4096, ...}) = 0
+lstat64("/tmp/session_mm.sem", {st_mode=S_IFREG|0600, st_size=0, ...}) = 0
+lstat64("/tmp/.ICE-unix", {st_mode=S_IFDIR|S_ISVTX|0777, st_size=4096, ...}) = 0
+lstat64("/tmp/kde-feiliu", {st_mode=S_IFDIR|0700, st_size=4096, ...}) = 0
+lstat64("/tmp/ksocket-feiliu", {st_mode=S_IFDIR|0700, st_size=4096, ...}) = 0
+lstat64("/tmp/mcop-feiliu", {st_mode=S_IFDIR|0700, st_size=4096, ...}) = 0
+lstat64("/tmp/ksocket-Wolverine", {st_mode=S_IFDIR|0700, st_size=4096, ...}) = 0
+lstat64("/tmp/nsform3AFE059412E0B5F", {st_mode=S_IFREG|0600, st_size=528, ...}) = 0
+lstat64("/tmp/hacking.tgz", {st_mode=S_IFREG|0644, st_size=1074303, ...}) = 0
+lstat64("/tmp/knark.o", {st_mode=S_IFREG|0644, st_size=14136, ...}) = 0
+lstat64("/tmp/knark-2.4.3.tgz", {st_mode=S_IFREG|0644, st_size=57213, ...}) = 0
+lstat64("/tmp/modhide.o", {st_mode=S_IFREG|0644, st_size=1320, ...}) = 0
+lstat64("/tmp/syscall.o", {st_mode=S_IFREG|0644, st_size=1620, ...}) = 0
+lstat64("/tmp/.hideme", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+ipc_subcall(0x3, 0x80583d0, 0x1000, 0)  = 0
+close(3)                                = 0
+open("/etc/mtab", O_RDONLY)             = 3
+fstat64(3, {st_mode=S_IFREG|0644, st_size=721, ...}) = 0
+old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40020000
+read(3, "/dev/hdc5 / ext2 rw 0 0\nnone /pr"..., 4096) = 721
+close(3)                                = 0
+munmap(0x40020000, 4096)                = 0
+open("/proc/meminfo", O_RDONLY)         = 3
+fstat64(3, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40020000
+read(3, "        total:    used:    free:"..., 4096) = 548
+close(3)                                = 0
+munmap(0x40020000, 4096)                = 0
+open("/usr/share/locale/en_US/LC_MESSAGES/fileutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/share/locale/en/LC_MESSAGES/fileutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+fstat64(1, {st_mode=S_IFREG|0644, st_size=10521, ...}) = 0
+old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40020000
+socket(PF_UNIX, SOCK_STREAM, 0)         = 3
+connect(3, {sin_family=AF_UNIX, path="                                                                                       /var/run/.nscd_socket"}, 110) = -1 ENOENT (No such file or directory)
+close(3)                                = 0
+open("/etc/nsswitch.conf", O_RDONLY)    = 3
+fstat64(3, {st_mode=S_IFREG|0644, st_size=1744, ...}) = 0
+old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40021000
+read(3, "#\n# /etc/nsswitch.conf\n#\n# An ex"..., 4096) = 1744
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+munmap(0x40021000, 4096)                = 0
+open("/etc/ld.so.cache", O_RDONLY)      = 3
+fstat64(3, {st_mode=S_IFREG|0644, st_size=49641, ...}) = 0
+old_mmap(NULL, 49641, PROT_READ, MAP_PRIVATE, 3, 0) = 0x4019f000
+close(3)                                = 0
+open("/lib/libnss_files.so.2", O_RDONLY) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\360 \0"..., 1024) = 1024
+fstat64(3, {st_mode=S_IFREG|0755, st_size=38580, ...}) = 0
+old_mmap(NULL, 41960, PROT_READ|PROT_EXEC, MAP_PRIVATE, 3, 0) = 0x401ac000
+mprotect(0x401b6000, 1000, PROT_NONE)   = 0
+old_mmap(0x401b6000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 3, 0x9000) = 0x401b6000
+close(3)                                = 0
+munmap(0x4019f000, 49641)               = 0
+open("/etc/passwd", O_RDONLY)           = 3
+shmat(3, 0x1, 0x1ptrace: umoven: Input/output error
+)                      = ?
+shmat(3, 0x1, 0x2ptrace: umoven: Input/output error
+)                      = ?
+fstat64(3, {st_mode=S_IFREG|0644, st_size=1730, ...}) = 0
+old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40021000
+read(3, "root:x:0:0:root:/root:/bin/bash\n"..., 4096) = 1730
+close(3)                                = 0
+munmap(0x40021000, 4096)                = 0
+socket(PF_UNIX, SOCK_STREAM, 0)         = 3
+connect(3, {sin_family=AF_UNIX, path="                                                                                       /var/run/.nscd_socket"}, 110) = -1 ENOENT (No such file or directory)
+close(3)                                = 0
+open("/etc/group", O_RDONLY)            = 3
+shmat(3, 0x1, 0x1ptrace: umoven: Input/output error
+)                      = ?
+shmat(3, 0x1, 0x2ptrace: umoven: Input/output error
+)                      = ?
+fstat64(3, {st_mode=S_IFREG|0644, st_size=788, ...}) = 0
+old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40021000
+read(3, "root:x:0:root\nbin:x:1:root,bin,d"..., 4096) = 788
+close(3)                                = 0
+munmap(0x40021000, 4096)                = 0
+open("/etc/localtime", O_RDONLY)        = 3
+fstat64(3, {st_mode=S_IFREG|0644, st_size=1267, ...}) = 0
+old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40021000
+read(3, "TZif\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\4\0\0\0\4\0"..., 4096) = 1267
+close(3)                                = 0
+munmap(0x40021000, 4096)                = 0
+open("/etc/passwd", O_RDONLY)           = 3
+shmat(3, 0x1, 0x1ptrace: umoven: Input/output error
+)                      = ?
+shmat(3, 0x1, 0x2ptrace: umoven: Input/output error
+)                      = ?
+fstat64(3, {st_mode=S_IFREG|0644, st_size=1730, ...}) = 0
+old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40021000
+read(3, "root:x:0:0:root:/root:/bin/bash\n"..., 4096) = 1730
+close(3)                                = 0
+munmap(0x40021000, 4096)                = 0
+open("/etc/group", O_RDONLY)            = 3
+shmat(3, 0x1, 0x1ptrace: umoven: Input/output error
+)                      = ?
+shmat(3, 0x1, 0x2ptrace: umoven: Input/output error
+)                      = ?
+fstat64(3, {st_mode=S_IFREG|0644, st_size=788, ...}) = 0
+old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40021000
+read(3, "root:x:0:root\nbin:x:1:root,bin,d"..., 4096) = 788
+close(3)                                = 0
+munmap(0x40021000, 4096)                = 0
+open("/etc/passwd", O_RDONLY)           = 3
+shmat(3, 0x1, 0x1ptrace: umoven: Input/output error
+)                      = ?
+shmat(3, 0x1, 0x2ptrace: umoven: Input/output error
+)                      = ?
+fstat64(3, {st_mode=S_IFREG|0644, st_size=1730, ...}) = 0
+old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40021000
+read(3, "root:x:0:0:root:/root:/bin/bash\n"..., 4096) = 1730
+close(3)                                = 0
+munmap(0x40021000, 4096)                = 0
+open("/etc/group", O_RDONLY)            = 3
+shmat(3, 0x1, 0x1ptrace: umoven: Input/output error
+)                      = ?
+shmat(3, 0x1, 0x2ptrace: umoven: Input/output error
+)                      = ?
+fstat64(3, {st_mode=S_IFREG|0644, st_size=788, ...}) = 0
+old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40021000
+read(3, "root:x:0:root\nbin:x:1:root,bin,d"..., 4096) = 788
+close(3)                                = 0
+munmap(0x40021000, 4096)                = 0
+open("/etc/passwd", O_RDONLY)           = 3
+shmat(3, 0x1, 0x1ptrace: umoven: Input/output error
+)                      = ?
+shmat(3, 0x1, 0x2ptrace: umoven: Input/output error
+)                      = ?
+fstat64(3, {st_mode=S_IFREG|0644, st_size=1730, ...}) = 0
+old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40021000
+read(3, "root:x:0:0:root:/root:/bin/bash\n"..., 4096) = 1730
+close(3)                                = 0
+munmap(0x40021000, 4096)                = 0
+open("/etc/group", O_RDONLY)            = 3
+shmat(3, 0x1, 0x1ptrace: umoven: Input/output error
+)                      = ?
+shmat(3, 0x1, 0x2ptrace: umoven: Input/output error
+)                      = ?
+fstat64(3, {st_mode=S_IFREG|0644, st_size=788, ...}) = 0
+old_mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40021000
+read(3, "root:x:0:root\nbin:x:1:root,bin,d"..., 4096) = 788
+close(3)                                = 0
+munmap(0x40021000, 4096)                = 0
+write(1, "total 1196\ndrwxrwxrwt   11 root "..., 1371total 1196
+drwxrwxrwt   11 root     root         4096 May 14 02:02 .
+drwxr-xr-x   18 root     root         4096 May 12 20:46 ..
+drwxrwxrwt    2 root     root         4096 May 13 16:01 .ICE-unix
+-r--r--r--    1 root     root           11 May 13 15:59 .X0-lock
+drwxrwxrwt    2 root     root         4096 May 13 15:59 .X11-unix
+drwxrwxrwt    2 xfs      xfs          4096 May 12 20:24 .font-unix
+drwxr-xr-x    2 root     root         4096 May 14 02:02 .hideme
+-rw-r--r--    1 root     root      1074303 May 13 13:14 hacking.tgz
+drwx------    2 feiliu   feiliu       4096 May 13 16:01 kde-feiliu
+-rw-r--r--    1 root     root        57213 May 13 16:24 knark-2.4.3.tgz
+-rw-r--r--    1 root     root        14136 May 14 01:41 knark.o
+drwx------    2 Wolverin Wolverin     4096 May 10 22:54 ksocket-Wolverine
+drwx------    2 feiliu   feiliu       4096 May 14 00:12 ksocket-feiliu
+drwx------    2 root     root         4096 May 10 20:42 ksocket-root
+-rw-r--r--    1 root     root           53 May  9 11:49 linuxconf-rpminstall.log
+drwx------    2 feiliu   feiliu       4096 May 10 20:55 mcop-feiliu
+-rw-r--r--    1 root     root         1320 May 13 17:22 modhide.o
+-rw-------    1 feiliu   feiliu        528 May 12 23:55 nsform3AFE059412E0B5F
+-rw-------    1 root     root            0 May 12 20:24 session_mm.sem
+-rw-r--r--    1 root     root         1620 May 14 00:45 syscall.o
+) = 1371
+close(1)                                = 0
+munmap(0x40020000, 4096)                = 0
+_exit(0)                                = ?

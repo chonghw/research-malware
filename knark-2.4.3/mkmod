@@ -1,0 +1,2 @@
+cc -Wall -O2 -Wstrict-prototypes -fomit-frame-pointer -pipe -fno-strength-reduce -malign-loops=2 -malign-jumps=2 -malign-functions=2 -include /usr/src/linux/include/linux/modversions.h -I/usr/src/linux/include -c src/knark.c -o knark.o -D__KERNEL__ -DMODULE
+cp -f knark.o /tmp
