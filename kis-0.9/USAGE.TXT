@@ -1,0 +1,111 @@
+/*************************************************\
+* KIS docs v0.9  by optyx <optyx@uberhax0r.net>   *
+* DISCLAIMER:  by compiling and running the KIS   *
+* server or client you accept full legal and      *
+* financial responsiblity for any damages and/or  *
+* reprocussions which result because of use of    *
+* this software.  This is for EDUCATIONAL         *
+* purposes ONLY and is not to be used in an       *
+* illegal manner or for commercial use and/or     *
+* analyzing                                       *
+*                                                 *
+* have fun - Optyx                                *
+* http://www.uberhax0r.net - putting bullets in   *
+* mullets since '96                               *
+\*************************************************/
+
+\x00 building kis_client
+\x01 configuring the kis server
+\x02 configuring the kis client
+\x03 ENJOY
+\x04 Greetz
+
+\x00 building kis_client
+in the kis_client directory of the source distribution
+$ ./configure
+$ make
+$ make install (this probably requires root to write to /usr/local/bin)
+
+\x01 configuring the kis_server 
+GUI:
+step 1. click options|server config (alt+e)
+step 2. set the modulus and remainder values.  note: the modulus value has to
+	be larger than the remainder value.  it is also wise to choose a
+	modulus larger than 16 to decrease the amount of processor consumption 
+	used by processing non-KIS related packets. (look at the h_ip_rcv in 
+	kis.c)
+step 3. choose key1 and key2, random = better
+step 4. set the install directory, this is the directory where the kis server
+	backs up the binary it "trojans" and a table of hidden files.
+step 5. set the trojan bin, this is the binary that kis replaces with itself so
+	kis is restarted on reboot. 
+step 6. click the save button.  save this as server.h in the kis_server
+	directory in the source tree.
+step 7. in the kis_server directory of the source distribution
+	$ make
+
+command line:
+step 1. $ vi server.h
+
+here's an example server.h file
+#define MOD 44 
+#define REM 6 
+#define KEY1 "uberhax0r"
+#define KEY2 "r0x"
+#define TROJAN_BIN "/sbin/init"
+#define INSTALL_DIR "/.secret_directory"
+
+step 2. in the kis_server directory of the source distribution
+	$ make
+
+extra stuff:
+option.h contains extra optioins to include.
+by defining ELITE_GID you can hide files by GID
+ex.
+#define ELITE_GID 999
+
+by defining ANTI_SEC (by default) KIS disables any security modules that may be 
+loaded.  look at i_remove_protect to add modules to the anti security list.
+ex.
+#define ANTI_SEC
+
+by defining DEBUG the server does not remove itself from the list of modules.
+This should most probably only be used for debugging purposes as the name 
+indicates.
+ex.
+#define DEBUG
+
+\x02 configuring the kis client
+
+Step 1. click options|client config.
+Step 2. Spoofing Option (note: requires root on most systems)
+Spoof Step 1. check the box for spoofing
+Spoof Step 2. enter the ip of the host you wish to spoof as.  by specifing 0 for
+	the IP KIS will spoof a random IP every time it sends a packet. 
+	By specifying  0 for the port KIS will spoof a different port every
+	time.
+Step 3. Results - by checking the get results box it sends the results packets
+	to the IP and port specified in local ip:port.
+Step 4. Local IP:Port - in this box you enter the ip and port that the packets
+	will be sent out as.
+	NOTE: when behind a firewall you must specify the external ip of the
+		firewall and port.  Also you cannot recieve results this way.
+		I'm planning on writing a kis_relay program that relays the
+		packets properly, but alas I'm out of time.
+
+\x03 ENJOY
+
+Everything else is pretty self explainatory or can be figured out very easily.
+included in the server distrobution is an example kernel plugin and an example
+of how to execve() KIS functions from userspace.
+
+\x04 Greetz
+
+I'd like to thank all the people that helped beta test KIS and helped with
+design ideas/naming.  Specifically I'd like to thank (sorry if I forgot any)
+(much thanks) KT, t12, Ambient Empire Industrial, miah, cable, teso, vac,
+iridium, bronc, sir dystic, rika, yoda for the name KIS, zombasoul for graphics,
+koffin for graphics, awr, submicron, freqout, jeedi, moonglum, and anyone else 
+I forgot.
+
+--end of file--

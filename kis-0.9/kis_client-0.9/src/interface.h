@@ -1,0 +1,26 @@
+void build_ctree(void);
+GtkCTreeNode *add_ctree_node(char *, char *, GtkCTreeNode *);
+GtkWidget* create_window (void);
+GtkWidget* create_server_config_window (void);
+GtkWidget* create_file_select (gchar *);
+GtkWidget* create_about_window (void);
+GtkWidget* create_client_config_window (void);
+
+extern GtkWidget *results_text;
+extern GtkWidget *ctree;
+extern GtkCTreeNode *ctree_node;
+extern GtkWidget *args_box;
+extern GtkWidget *server_address_box;
+extern GtkWidget *mod_spin;
+extern GtkWidget *rem_spin;
+extern GtkWidget *key1;
+extern GtkWidget *key2;
+extern GtkWidget *install_dir;
+extern GtkWidget *trojan_bin;
+extern GtkWidget *spoof_option;
+extern GtkWidget *spoof_box;
+extern GtkWidget *results_box;
+extern GtkWidget *get_results_button;
+extern GtkWidget *plugin_dir_box;
+extern GtkWidget *file_select;
+extern char menuname[64];
